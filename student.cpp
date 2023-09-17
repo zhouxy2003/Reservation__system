@@ -209,6 +209,7 @@ void student::delteOrder(){
 
 	ofstream ofs;
 	OrderData od;
+	//先将文件中的数据读入容器
 	od.inData();
 
 	ofs.open(ORDER_FILE, ios::out | ios::trunc);

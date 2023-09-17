@@ -93,7 +93,25 @@
 
 	}
 
-
+	//教师登录
+	void teacherLogin(teacher*&t) {
+		while (true) {
+			t->teacherMenu();
+			int select;
+			cin >> select;
+			if (select == 1) {
+				t->viewAllOrder();
+			}
+			else if (select == 2) {
+				t->auditOrder();
+			}
+			else {
+				system("pause");
+				system("cls");
+				return;
+			}
+		}
+	}
 
 
 	//登录
@@ -201,7 +219,7 @@
 					system("pause");
 					system("cls");
 					p = new teacher(id, name, pwd);
-					
+					teacherLogin(p);
 					found = true; // 找到匹配的账户
 					break;
 				}

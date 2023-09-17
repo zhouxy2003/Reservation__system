@@ -2,6 +2,10 @@
 #include<iostream>
 using namespace std;
 #include"Person.h"
+#include"orderData.h"
+#include<fstream>
+#include"globalFile.h"
+#include<string>
 
 class teacher:public Person {
 public:
